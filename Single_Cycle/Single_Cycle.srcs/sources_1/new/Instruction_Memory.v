@@ -26,10 +26,10 @@ module Instruction_Memory
     output [31:0] RD 
     );
     reg  [7:0] INS_MEM [0:depth-1] ; //[7:0] to be word addressable 
-//    initial 
-//    begin
-//    //$readmemh("C:/Users/AHMED SAEED/Desktop/Test1.mem",INS_MEM) ;
-////      $readmemh("test.mem",INS_MEM) ;
-//    end
+    initial 
+    begin
+    $readmemh("C:/Users/AHMED SAEED/Desktop/branch_test.mem",INS_MEM) ;
+   // $readmemh("test.mem",INS_MEM) ;
+    end
     assign RD = {INS_MEM [A+3],INS_MEM [A+2],INS_MEM [A+1],INS_MEM [A]} ;
 endmodule

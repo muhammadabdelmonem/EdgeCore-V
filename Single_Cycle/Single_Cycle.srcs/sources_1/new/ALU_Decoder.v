@@ -59,7 +59,7 @@ module ALU_Decoder(
                          BranchFlag_reg = ~zero;
                          end
                  3'b111: begin //BGEU
-                         ALUControl_Reg = 4'b0100; // SLTU
+                         ALUControl_Reg = 4'b0101; // SLTU
                          BranchFlag_reg = zero;
                          end
                  default:ALUControl_Reg= 4'bxxxx;
