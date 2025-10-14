@@ -22,8 +22,8 @@
 
 module S_C_Control(
     input [31:0] Instr_In ,
-    input Zero ,
-    
+    input Zero,
+   
     output RegWrite ,
     output [1:0]ImmSrc ,
     output ALUSrc ,
@@ -34,6 +34,8 @@ module S_C_Control(
     );
     
     //Wires
+    wire BranchFlag;
+    
     wire Branch ;
     wire Jump ;
     wire [1:0] ALUOp ;
@@ -64,9 +66,11 @@ module S_C_Control(
     .funct3(funct3) ,
     .op_5(OP[5]) ,
     .funct7_5(funct7_5) ,
-    .ALUControl(ALUControl)
+    .zero(Zero),
+    .ALUControl(ALUControl),
+    .BranchFlag(BranchFlag)
     );
     
-    assign PCSrc = ( (Zero&Branch) | Jump ) ;
+    assign PCSrc = ( (BranchFlag & Branch) | Jump ) ;
     
 endmodule

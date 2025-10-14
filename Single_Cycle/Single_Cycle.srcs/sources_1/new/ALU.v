@@ -25,13 +25,9 @@ module ALU(
     input [63:0] SrcB ,
     input [3:0]  ALUControl ,
     output [63:0] ALUResult ,
-    output Zero ,
-    output less_than ,
-    output less_than_unsigned
+    output Zero
     );
     reg [63:0]result ;
-    reg less_than_unsigned_reg ;
-    reg less_than_reg ;
     always @(*) begin
         case(ALUControl)
         
@@ -40,21 +36,13 @@ module ALU(
             4'b0010 : result = SrcA & SrcB ; //and
             4'b0011 : result = SrcA | SrcB ; //or
             4'b0100 : result = SrcA ^ SrcB ; //xor          
-            4'b0101 : begin 
-                     result = (SrcA < SrcB) ; //sltu
-                     less_than_unsigned_reg = (SrcA < SrcB); //bltu  bgeu
-                     end
-            4'b0110 : begin
-                     result = ($signed(SrcA) < $signed(SrcB)) ; //slt
-                     less_than_reg = ($signed(SrcA) < $signed(SrcB)) ; //blt  bge
-                     end
+            4'b0101 : result = (SrcA < SrcB) ; //sltu
+            4'b0110 : result = ($signed(SrcA) < $signed(SrcB)) ; //slt
             default: result = SrcA;
         endcase
     end
     assign ALUResult = result ;
     assign Zero = ~(|ALUResult) ;    //beq bne
-    assign less_than = less_than_reg;    //blt  bge
-    assign less_than_unsigned = less_than_unsigned_reg ;   //bltu  bgeu
 endmodule
 
 

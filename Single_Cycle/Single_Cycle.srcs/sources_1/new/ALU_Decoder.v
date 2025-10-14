@@ -25,14 +25,46 @@ module ALU_Decoder(
     input  [2:0]funct3 ,
     input  op_5 ,
     input  funct7_5 ,
-    output [3:0]ALUControl
+    input zero,
+    
+    output [3:0]ALUControl,
+    output BranchFlag
     );
     reg [3:0]ALUControl_Reg ;
+    reg BranchFlag_reg;
     always@(*)
     begin
      case(ALUOp)
      2'b00: ALUControl_Reg =4'b0000; //add for (lw and sw)
-     2'b01: ALUControl_Reg =4'b0001; //sub for beq
+     2'b01: begin // B-Type
+                 case(funct3)
+                 3'b000: begin //BEQ
+                         ALUControl_Reg = 4'b0001; // sub 
+                         BranchFlag_reg = zero;
+                         end
+                 3'b001: begin //BNE
+                         ALUControl_Reg = 4'b0001; // sub 
+                         BranchFlag_reg = ~zero;
+                         end
+                 3'b100: begin //BLT
+                         ALUControl_Reg = 4'b0101; // SLT
+                         BranchFlag_reg = ~zero;
+                         end
+                 3'b101: begin //BGE
+                         ALUControl_Reg = 4'b0101; // SLT 
+                         BranchFlag_reg = zero;
+                         end
+                 3'b110: begin //BLTU
+                         ALUControl_Reg = 4'b0100; // SLTU
+                         BranchFlag_reg = ~zero;
+                         end
+                 3'b111: begin //BGEU
+                         ALUControl_Reg = 4'b0100; // SLTU
+                         BranchFlag_reg = zero;
+                         end
+                 default:ALUControl_Reg= 4'bxxxx;
+                 endcase
+            end
      2'b10: begin //R-Type & I type 
                 case(funct3)
                 3'b000: begin
@@ -56,4 +88,5 @@ module ALU_Decoder(
      endcase
     end
     assign ALUControl = ALUControl_Reg ;
+    assign BranchFlag = BranchFlag_reg;
 endmodule
