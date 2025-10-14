@@ -1,0 +1,50 @@
+# Vivado generated files and directories
+*.jou
+*.log
+*.str
+*.zip
+*.xml
+*.html
+*.txt
+*.pb
+*.wdb
+*.dcp
+*.bit
+*.bin
+*.svf
+*.rpt
+
+# Vivado project directories
+.cache/
+.hw/
+.ip_user_files/
+.sim/
+.runs/
+.gen/
+.sdk/
+.xsim/
+.Xil/
+
+# Vivado lock and temp files
+*.lck
+*.tmp
+*.temp
+*.backup
+*.bak
+*.cache
+*.cfg
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Ignore build output directories
+build/
+output/
+
+# Don’t ignore source and project files
+!*.v
+!*.sv
+!*.xdc
+!*.xpr
+!*.tcl
