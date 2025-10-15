@@ -25,7 +25,7 @@ module ALU_Decoder(
     input  [2:0]funct3 ,
     input  op_5 ,
     input  funct7_5 ,
-    input zero,
+    input  zero,
     
     output [3:0]ALUControl,
     output BranchFlag
@@ -35,7 +35,7 @@ module ALU_Decoder(
     always@(*)
     begin
      case(ALUOp)
-     2'b00: ALUControl_Reg =4'b0000; //add for (lw and sw)
+     2'b00: ALUControl_Reg =4'b0000; //add for (load and store)
      2'b01: begin // B-Type
                  case(funct3)
                  3'b000: begin //BEQ

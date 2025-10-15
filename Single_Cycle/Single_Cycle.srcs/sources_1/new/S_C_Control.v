@@ -30,7 +30,8 @@ module S_C_Control(
     output MemWrite ,
     output [1:0]ResultSrc ,
     output PCSrc,
-    output [3:0]ALUControl
+    output [3:0]ALUControl ,
+    output [2:0]DataSizeCon
     );
     
     //Wires
@@ -72,5 +73,5 @@ module S_C_Control(
     );
     
     assign PCSrc = ( (BranchFlag & Branch) | Jump ) ;
-    
+    assign DataSizeCon = funct3;
 endmodule

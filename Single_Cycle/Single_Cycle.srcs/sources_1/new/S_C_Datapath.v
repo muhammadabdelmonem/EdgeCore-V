@@ -30,6 +30,7 @@ module S_C_Datapath(
     input ALUSrc ,
     input [3:0]ALUControl ,
     input [1:0]ImmSrc ,
+    input  [2:0]DataSizeCon,
     
     output [31:0] Instr_OUT ,
     output Zero_Out
@@ -130,6 +131,7 @@ module S_C_Datapath(
     Data_Memory DM_UNIT(
     .clk(clk), 
     .WE(MemWrite) ,
+    .DataSizeCon(DataSizeCon),
     .A(ALUResult) , //address of inistructoin
     .WD(WriteData) ,
     .RD(ReadData) 
