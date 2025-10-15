@@ -40,19 +40,43 @@ module Data_Memory
     reg [63:0] RD_reg ;
     
     //Store(WRITE)logic
+
     always @(posedge clk) 
     begin
         if (WE) begin
             case (DataSizeCon)
-                3'b000: DATA_MEM[A] <= WD[7:0]; // SB
-                3'b001: {DATA_MEM[A+1],DATA_MEM[A]} <= WD[15:0]; //SH
-                3'b010: {DATA_MEM[A+3],DATA_MEM[A+2],DATA_MEM[A+1],DATA_MEM[A]} <= WD[31:0]; // SW
-                3'b011: {DATA_MEM [A+7],DATA_MEM [A+6],DATA_MEM [A+5],DATA_MEM [A+4],DATA_MEM [A+3],DATA_MEM [A+2],DATA_MEM [A+1],DATA_MEM [A]} <= WD ; //SD
-                default: ; // no write
+            3'b000: // SB
+                begin 
+                DATA_MEM[A] <= WD[7:0];
+                end
+            3'b001: // SH
+                begin 
+                DATA_MEM[A]   <= WD[7:0];
+                DATA_MEM[A+1] <= WD[15:8];
+                end
+            3'b010: // SW
+                begin 
+                DATA_MEM[A]   <= WD[7:0];
+                DATA_MEM[A+1] <= WD[15:8];
+                DATA_MEM[A+2] <= WD[23:16];
+                DATA_MEM[A+3] <= WD[31:24];
+                end
+            3'b011: // SD
+                begin 
+                DATA_MEM[A]   <= WD[7:0];
+                DATA_MEM[A+1] <= WD[15:8];
+                DATA_MEM[A+2] <= WD[23:16];
+                DATA_MEM[A+3] <= WD[31:24];
+                DATA_MEM[A+4] <= WD[39:32];
+                DATA_MEM[A+5] <= WD[47:40];
+                DATA_MEM[A+6] <= WD[55:48];
+                DATA_MEM[A+7] <= WD[63:56];
+                end
+            default: ;
             endcase
         end
     end
-    
+
     //Load(READ)logic
     always @(*) 
     begin
