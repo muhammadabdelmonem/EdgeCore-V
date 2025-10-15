@@ -1,50 +1,83 @@
-# Vivado generated files and directories
+# Vivado project files
 *.jou
 *.log
 *.str
-*.zip
+*.xpr
 *.xml
 *.html
 *.txt
-*.pb
-*.wdb
-*.dcp
-*.bit
-*.bin
-*.svf
-*.rpt
+*.zip
+*.dir/
+*.cache/
+*.hw/
+*.sim/
+*.ip_user_files/
+*.srcs/
+*.data/
+*.runs/
+*.gen/
+*.tmp/
+*.cache/
+*.Xil/
+*.backup.*
+*.crashdump
 
-# Vivado project directories
-.cache/
+# Vivado generated directories
 .hw/
-.ip_user_files/
 .sim/
+.ip_user_files/
+.srcs/
+.data/
 .runs/
 .gen/
-.sdk/
-.xsim/
-.Xil/
 
-# Vivado lock and temp files
-*.lck
-*.tmp
-*.temp
-*.backup
-*.bak
-*.cache
-*.cfg
+# Vivado checkpoint files
+*.dcp
 
-# System files
+# Vivado implemented results
+*.bit
+*.bin
+*.mcs
+*.prm
+
+# Vivado reports
+*.rpt
+*.power*
+*.utilization*
+*.timing*
+
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-# Ignore build output directories
-build/
-output/
+# Editor temporary files
+*~
+*.swp
+*.swo
+*.un~
 
-# Don’t ignore source and project files
-!*.v
-!*.sv
-!*.xdc
-!*.xpr
-!*.tcl
+# Backup files
+*.bak
+*.backup
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Verilog simulation files (if using external simulators)
+*.vcd
+*.fsdb
+*.vpd
+
+# Optional: Exclude large generated files
+# *.bit
+# *.mcs
+
+# But you might want to keep these for releases:
+# !releases/*.bit
