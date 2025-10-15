@@ -29,25 +29,29 @@ module Single_Cycle_TOP(
     wire [31:0] Instr ;
     wire Zero ;
     wire RegWrite ;
-    wire [1:0]ImmSrc ;
-    wire ALUSrc ;
+    wire [2:0]ImmSrc ;
+    wire ALUSrcA ;
+    wire ALUSrcB ;
     wire MemWrite ;
     wire [1:0]ResultSrc ;
     wire PCSrc ;
     wire [3:0]ALUControl ;
     wire [2:0]DataSizeCon;
+    wire SignExtension;
     
     S_C_Control CONTROL_TOP(
     .Instr_In(Instr) ,
     .Zero(Zero) ,
     .RegWrite(RegWrite) ,
     .ImmSrc(ImmSrc) ,
-    .ALUSrc(ALUSrc) ,
+    .ALUSrcA(ALUSrcA) ,
+    .ALUSrcB(ALUSrcB) ,
     .MemWrite(MemWrite) ,
     .ResultSrc(ResultSrc) ,
     .PCSrc(PCSrc),
     .ALUControl(ALUControl),
-    .DataSizeCon(DataSizeCon)
+    .DataSizeCon(DataSizeCon),
+    .SignExtension(SignExtension)
     );
     
     S_C_Datapath DATAPATH_TOP(
@@ -56,9 +60,12 @@ module Single_Cycle_TOP(
     .PCSrc(PCSrc) ,
     .MemWrite(MemWrite) ,
     .DataSizeCon(DataSizeCon) ,
+    .SignExtension(SignExtension) ,
+    .OP3(Instr[3]),
     .RegWrite(RegWrite) ,
     .ResultSrc(ResultSrc),
-    .ALUSrc(ALUSrc) ,
+    .ALUSrcA(ALUSrcA) ,
+    .ALUSrcB(ALUSrcB) ,
     .ALUControl(ALUControl) ,
     .ImmSrc(ImmSrc) ,
     .Instr_OUT(Instr) ,

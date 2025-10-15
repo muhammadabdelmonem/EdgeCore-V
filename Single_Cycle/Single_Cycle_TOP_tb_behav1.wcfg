@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Single_Cycle_TOP_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Single_Cycle_TOP_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="103.450 ns"></ZoomStartTime>
+      <ZoomEndTime time="112.691 ns"></ZoomEndTime>
+      <Cursor1Time time="107.420 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="143"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/Single_Cycle_TOP_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/reset_n" type="logic">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/T" type="array">
+      <obj_property name="ElementShortName">T[31:0]</obj_property>
+      <obj_property name="ObjectShortName">T[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PC_UNIT/PC" type="array">
+      <obj_property name="ElementShortName">PC[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RF_UNIT/reg_file" type="array">
+      <obj_property name="ElementShortName">reg_file[0:31][63:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_file[0:31][63:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/DM_UNIT/DATA_MEM" type="array">
+      <obj_property name="ElementShortName">DATA_MEM[0:1023][7:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_MEM[0:1023][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/SrcA" type="array">
+      <obj_property name="ElementShortName">SrcA[63:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcA[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/SrcB" type="array">
+      <obj_property name="ElementShortName">SrcB[63:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcB[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/ALUControl" type="array">
+      <obj_property name="ElementShortName">ALUControl[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUControl[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/SignExtension" type="logic">
+      <obj_property name="ElementShortName">SignExtension</obj_property>
+      <obj_property name="ObjectShortName">SignExtension</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/ALUResult" type="array">
+      <obj_property name="ElementShortName">ALUResult[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUResult[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/Zero" type="logic">
+      <obj_property name="ElementShortName">Zero</obj_property>
+      <obj_property name="ObjectShortName">Zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/result" type="array">
+      <obj_property name="ElementShortName">result[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/temp" type="array">
+      <obj_property name="ElementShortName">temp[63:0]</obj_property>
+      <obj_property name="ObjectShortName">temp[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/SrcA" type="array">
+      <obj_property name="ElementShortName">SrcA[63:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcA[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/SrcB" type="array">
+      <obj_property name="ElementShortName">SrcB[63:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcB[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/ALUControl" type="array">
+      <obj_property name="ElementShortName">ALUControl[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUControl[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/SignExtension" type="logic">
+      <obj_property name="ElementShortName">SignExtension</obj_property>
+      <obj_property name="ObjectShortName">SignExtension</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/OP3" type="logic">
+      <obj_property name="ElementShortName">OP3</obj_property>
+      <obj_property name="ObjectShortName">OP3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/ALUResult" type="array">
+      <obj_property name="ElementShortName">ALUResult[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUResult[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/Zero" type="logic">
+      <obj_property name="ElementShortName">Zero</obj_property>
+      <obj_property name="ObjectShortName">Zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/result" type="array">
+      <obj_property name="ElementShortName">result[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/temp" type="array">
+      <obj_property name="ElementShortName">temp[63:0]</obj_property>
+      <obj_property name="ObjectShortName">temp[63:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -25,13 +25,15 @@ module S_C_Control(
     input Zero,
    
     output RegWrite ,
-    output [1:0]ImmSrc ,
-    output ALUSrc ,
+    output [2:0]ImmSrc ,
+    output ALUSrcA ,
+    output ALUSrcB ,
     output MemWrite ,
     output [1:0]ResultSrc ,
     output PCSrc,
     output [3:0]ALUControl ,
-    output [2:0]DataSizeCon
+    output [2:0]DataSizeCon,
+    output SignExtension
     );
     
     //Wires
@@ -52,14 +54,17 @@ module S_C_Control(
     
     Main_Decoder MAIN_DECOD_UNIT(
     .OP(OP) ,
+    .funct3(funct3),
     .RegWrite(RegWrite) ,
     .ImmSrc(ImmSrc) ,
-    .ALUSrc(ALUSrc) ,
+    .ALUSrcA(ALUSrcA) ,
+    .ALUSrcB(ALUSrcB) ,
     .MemWrite(MemWrite) ,
     .ResultSrc(ResultSrc) ,
     .Branch(Branch) ,
     .ALUOp(ALUOp) ,
-    .Jump(Jump)
+    .Jump(Jump),
+    .SignExtension(SignExtension)
     );
     
     ALU_Decoder ALU_DECOD_UNIT(

@@ -36,6 +36,7 @@ module ALU_Decoder(
     begin
      case(ALUOp)
      2'b00: ALUControl_Reg =4'b0000; //add for (load and store)
+     2'b11: ALUControl_Reg =4'b1010; //LUI U type
      2'b01: begin // B-Type
                  case(funct3)
                  3'b000: begin //BEQ
@@ -62,7 +63,7 @@ module ALU_Decoder(
                          ALUControl_Reg = 4'b0101; // SLTU
                          BranchFlag_reg = zero;
                          end
-                 default:ALUControl_Reg= 4'bxxxx;
+                 default:ALUControl_Reg= 4'b0000;
                  endcase
             end
      2'b10: begin //R-Type & I type 
@@ -70,21 +71,25 @@ module ALU_Decoder(
                 3'b000: begin
                          case({op_5,funct7_5})
                          2'b11: ALUControl_Reg =4'b0001; //sub
-                         2'b00: ALUControl_Reg =4'b0000; //add /addi
-                         2'b01: ALUControl_Reg =4'b0000; //add /addi
-                         2'b10: ALUControl_Reg =4'b0000; //add /addi
-                         default: ALUControl_Reg =4'bxxxx;
+                         2'b00, 2'b01, 2'b10: ALUControl_Reg =4'b0000; //add /addi
+                         default: ALUControl_Reg =4'b0000;
                          endcase
                         end
                 3'b010: ALUControl_Reg = 4'b0101;  //slt
                 3'b110: ALUControl_Reg = 4'b0011;  //or / ori
                 3'b111: ALUControl_Reg = 4'b0010;  //and / andi
                 3'b100: ALUControl_Reg = 4'b0100;  //xor / xori         
-                3'b001: ALUControl_Reg = 4'b0100;  //sll / slti         
-                default: ALUControl_Reg= 4'bxxxx;
+                3'b001: ALUControl_Reg = 4'b0111;  //sll 
+                3'b101: begin 
+                        case(funct7_5)
+                        1'b0: ALUControl_Reg = 4'b1000;  //srl
+                        1'b1: ALUControl_Reg = 4'b1001;  //sra
+                        endcase 
+                        end       
+                default: ALUControl_Reg= 4'b0000;
                 endcase
             end
-     default: ALUControl_Reg =4'bxxxx;
+     default: ALUControl_Reg =4'b0000;
      endcase
     end
     assign ALUControl = ALUControl_Reg ;

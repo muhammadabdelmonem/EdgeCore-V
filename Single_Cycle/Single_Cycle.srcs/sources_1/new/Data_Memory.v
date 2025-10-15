@@ -21,7 +21,7 @@
 
 
 module Data_Memory
-    #(parameter depth = 256)(
+    #(parameter depth = 1024)(
     input  clk, 
     input  WE ,
     input  [63:0] A  , // Address 
