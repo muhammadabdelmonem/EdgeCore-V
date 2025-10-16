@@ -44,6 +44,7 @@ module S_C_Datapath(
     wire [63:0]PCTarget ;
     wire [63:0]PCNext ;
     wire [63:0]PC ;
+    wire [63:0]BaseTarget;
     
     //EXTEND WIRE
     wire [63:0]ImmExt ;
@@ -74,9 +75,16 @@ module S_C_Datapath(
     .PCPlus4(PCPlus4)
     );
     
+    mux2x1 PC_target_UNIT(    //for jal and jalr
+    .sel(OP3) ,
+    .in1(RD1) ,
+    .in2(PC) ,
+    .out(BaseTarget)
+    );
+    
     PCTarget PC_TARGET_UNIT(
     .ImmExt(ImmExt) ,
-    .PC(PC) ,
+    .BaseTarget(BaseTarget) ,
     .PCTarget(PCTarget)
     );
     
