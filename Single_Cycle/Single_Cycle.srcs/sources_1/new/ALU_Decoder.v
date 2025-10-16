@@ -26,8 +26,11 @@ module ALU_Decoder(
     input  op_5 ,
     input  funct7_5 ,
     input  zero,
+    input  op_3,
     
+    output OP3,
     output [3:0]ALUControl,
+    output [2:0]DataSizeCon,
     output BranchFlag
     );
     reg [3:0]ALUControl_Reg ;
@@ -75,7 +78,8 @@ module ALU_Decoder(
                          default: ALUControl_Reg =4'b0000;
                          endcase
                         end
-                3'b010: ALUControl_Reg = 4'b0101;  //slt
+                3'b010: ALUControl_Reg = 4'b0110;  //slt
+                3'b011: ALUControl_Reg = 4'b0101;  //sltu
                 3'b110: ALUControl_Reg = 4'b0011;  //or / ori
                 3'b111: ALUControl_Reg = 4'b0010;  //and / andi
                 3'b100: ALUControl_Reg = 4'b0100;  //xor / xori         
@@ -94,4 +98,6 @@ module ALU_Decoder(
     end
     assign ALUControl = ALUControl_Reg ;
     assign BranchFlag = BranchFlag_reg;
+    assign DataSizeCon = funct3;
+    assign OP3 = op_3;
 endmodule

@@ -38,7 +38,7 @@ module Main_Decoder(
     always@(*)           
     begin
         case(OP)
-        7'b0000011: outputs = 14'b1_000_0_1_0_01_0_00_0_0 ; //SW
+        7'b0000011: outputs = 14'b1_000_0_1_0_01_0_00_0_0 ; //LW
         7'b0100011: outputs = 14'b0_001_0_1_1_xx_0_00_0_0 ; //SW
         7'b0110011: outputs = 14'b1_xxx_0_0_0_00_0_10_0_0 ; //R Type
         7'b1100011: outputs = 14'b0_010_0_0_0_xx_1_01_0_0 ; //Beq

@@ -33,6 +33,7 @@ module S_C_Control(
     output PCSrc,
     output [3:0]ALUControl ,
     output [2:0]DataSizeCon,
+    output OP3,
     output SignExtension
     );
     
@@ -71,12 +72,14 @@ module S_C_Control(
     .ALUOp(ALUOp) ,
     .funct3(funct3) ,
     .op_5(OP[5]) ,
+    .op_3(OP[3]) ,
     .funct7_5(funct7_5) ,
     .zero(Zero),
     .ALUControl(ALUControl),
-    .BranchFlag(BranchFlag)
+    .BranchFlag(BranchFlag),
+    .DataSizeCon(DataSizeCon),
+    .OP3(OP3)
     );
     
     assign PCSrc = ( (BranchFlag & Branch) | Jump ) ;
-    assign DataSizeCon = funct3;
 endmodule
