@@ -34,7 +34,8 @@ module S_C_Control(
     output [3:0]ALUControl ,
     output [2:0]DataSizeCon,
     output OP3,
-    output SignExtension
+    output SignExtension,
+    output Target
     );
     
     //Wires
@@ -65,7 +66,8 @@ module S_C_Control(
     .Branch(Branch) ,
     .ALUOp(ALUOp) ,
     .Jump(Jump),
-    .SignExtension(SignExtension)
+    .SignExtension(SignExtension) ,
+    .Target(Target)
     );
     
     ALU_Decoder ALU_DECOD_UNIT(

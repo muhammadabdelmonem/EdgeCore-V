@@ -66,7 +66,7 @@ module ALU_Decoder(
                          ALUControl_Reg = 4'b0101; // SLTU
                          BranchFlag_reg = zero;
                          end
-                 default:ALUControl_Reg= 4'b0000;
+                 default:ALUControl_Reg= 4'bx;
                  endcase
             end
      2'b10: begin //R-Type & I type 
@@ -75,7 +75,7 @@ module ALU_Decoder(
                          case({op_5,funct7_5})
                          2'b11: ALUControl_Reg =4'b0001; //sub
                          2'b00, 2'b01, 2'b10: ALUControl_Reg =4'b0000; //add /addi
-                         default: ALUControl_Reg =4'b0000;
+                         default: ALUControl_Reg =4'bx;
                          endcase
                         end
                 3'b010: ALUControl_Reg = 4'b0110;  //slt
@@ -90,10 +90,10 @@ module ALU_Decoder(
                         1'b1: ALUControl_Reg = 4'b1001;  //sra
                         endcase 
                         end       
-                default: ALUControl_Reg= 4'b0000;
+                default: ALUControl_Reg= 4'bx;
                 endcase
             end
-     default: ALUControl_Reg =4'b0000;
+     default: ALUControl_Reg =4'bx;
      endcase
     end
     assign ALUControl = ALUControl_Reg ;

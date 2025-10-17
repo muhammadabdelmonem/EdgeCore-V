@@ -39,6 +39,7 @@ module Single_Cycle_TOP(
     wire [2:0]DataSizeCon;
     wire SignExtension;
     wire OP3;
+    wire Target;
     
     S_C_Control CONTROL_TOP(
     .Instr_In(Instr) ,
@@ -53,7 +54,8 @@ module Single_Cycle_TOP(
     .ALUControl(ALUControl),
     .DataSizeCon(DataSizeCon),
     .SignExtension(SignExtension),
-    .OP3(OP3)
+    .OP3(OP3),
+    .Target(Target)
     );
     
     S_C_Datapath DATAPATH_TOP(
@@ -71,7 +73,8 @@ module Single_Cycle_TOP(
     .ALUControl(ALUControl) ,
     .ImmSrc(ImmSrc) ,
     .Instr_OUT(Instr) ,
-    .Zero_Out(Zero)
+    .Zero_Out(Zero),
+    .Target(Target)
     );
       
 endmodule

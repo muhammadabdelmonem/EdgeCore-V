@@ -34,6 +34,7 @@ module S_C_Datapath(
     input  [2:0]DataSizeCon,
     input SignExtension,
     input OP3,
+    input Target,
     
     output [31:0] Instr_OUT ,
     output Zero_Out
@@ -76,7 +77,7 @@ module S_C_Datapath(
     );
     
     mux2x1 PC_target_UNIT(    //for jal and jalr
-    .sel(OP3) ,
+    .sel(Target) ,
     .in1(RD1) ,
     .in2(PC) ,
     .out(BaseTarget)
