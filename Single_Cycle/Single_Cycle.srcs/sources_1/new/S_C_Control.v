@@ -22,18 +22,25 @@
 
 module S_C_Control(
     input [31:0] Instr_In ,
-    input Zero ,
-    
+    input Zero,
+   
     output RegWrite ,
-    output [1:0]ImmSrc ,
-    output ALUSrc ,
+    output [2:0]ImmSrc ,
+    output ALUSrcA ,
+    output ALUSrcB ,
     output MemWrite ,
     output [1:0]ResultSrc ,
     output PCSrc,
-    output [3:0]ALUControl
+    output [3:0]ALUControl ,
+    output [2:0]DataSizeCon,
+    output OP3,
+    output SignExtension,
+    output Target
     );
     
     //Wires
+    wire BranchFlag;
+    
     wire Branch ;
     wire Jump ;
     wire [1:0] ALUOp ;
@@ -49,24 +56,32 @@ module S_C_Control(
     
     Main_Decoder MAIN_DECOD_UNIT(
     .OP(OP) ,
+    .funct3(funct3),
     .RegWrite(RegWrite) ,
     .ImmSrc(ImmSrc) ,
-    .ALUSrc(ALUSrc) ,
+    .ALUSrcA(ALUSrcA) ,
+    .ALUSrcB(ALUSrcB) ,
     .MemWrite(MemWrite) ,
     .ResultSrc(ResultSrc) ,
     .Branch(Branch) ,
     .ALUOp(ALUOp) ,
-    .Jump(Jump)
+    .Jump(Jump),
+    .SignExtension(SignExtension) ,
+    .Target(Target)
     );
     
     ALU_Decoder ALU_DECOD_UNIT(
     .ALUOp(ALUOp) ,
     .funct3(funct3) ,
     .op_5(OP[5]) ,
+    .op_3(OP[3]) ,
     .funct7_5(funct7_5) ,
-    .ALUControl(ALUControl)
+    .zero(Zero),
+    .ALUControl(ALUControl),
+    .BranchFlag(BranchFlag),
+    .DataSizeCon(DataSizeCon),
+    .OP3(OP3)
     );
     
-    assign PCSrc = ( (Zero&Branch) | Jump ) ;
-    
+    assign PCSrc = ( (BranchFlag & Branch) | Jump ) ;
 endmodule

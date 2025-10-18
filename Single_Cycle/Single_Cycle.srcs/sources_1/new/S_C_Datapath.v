@@ -27,9 +27,14 @@ module S_C_Datapath(
     input MemWrite ,
     input RegWrite ,
     input [1:0]ResultSrc ,
-    input ALUSrc ,
+    input ALUSrcA ,
+    input ALUSrcB ,
     input [3:0]ALUControl ,
-    input [1:0]ImmSrc ,
+    input [2:0]ImmSrc ,
+    input  [2:0]DataSizeCon,
+    input SignExtension,
+    input OP3,
+    input Target,
     
     output [31:0] Instr_OUT ,
     output Zero_Out
@@ -40,6 +45,7 @@ module S_C_Datapath(
     wire [63:0]PCTarget ;
     wire [63:0]PCNext ;
     wire [63:0]PC ;
+    wire [63:0]BaseTarget;
     
     //EXTEND WIRE
     wire [63:0]ImmExt ;
@@ -54,7 +60,7 @@ module S_C_Datapath(
     
     //ALU WIRES
     wire [63:0]SrcA ;
-    assign SrcA = RD1 ;
+    //assign SrcA = RD1 ;
     wire [63:0]SrcB ;
     wire [63:0]ALUResult ;
     wire Zero ;
@@ -70,9 +76,16 @@ module S_C_Datapath(
     .PCPlus4(PCPlus4)
     );
     
+    mux2x1 PC_target_UNIT(    //for jal and jalr
+    .sel(Target) ,
+    .in1(RD1) ,
+    .in2(PC) ,
+    .out(BaseTarget)
+    );
+    
     PCTarget PC_TARGET_UNIT(
     .ImmExt(ImmExt) ,
-    .PC(PC) ,
+    .BaseTarget(BaseTarget) ,
     .PCTarget(PCTarget)
     );
     
@@ -111,9 +124,16 @@ module S_C_Datapath(
     .ImmSrc(ImmSrc) ,
     .ImmExt(ImmExt)
     );
-    
-    mux2x1 ALU_MUX_UNIT(
-    .sel(ALUSrc) ,
+   
+   mux2x1 ALU_MUX_UNITA(
+    .sel(ALUSrcA) ,
+    .in1(RD1) ,
+    .in2(PC) ,
+    .out(SrcA)
+    );
+     
+    mux2x1 ALU_MUX_UNITB(
+    .sel(ALUSrcB) ,
     .in1(RD2) ,
     .in2(ImmExt) ,
     .out(SrcB)
@@ -124,12 +144,15 @@ module S_C_Datapath(
     .SrcB(SrcB) ,
     .ALUControl(ALUControl) ,
     .ALUResult(ALUResult) ,
+    .SignExtension(SignExtension),
+    .OP3(OP3),
     .Zero(Zero)
     );
     
     Data_Memory DM_UNIT(
     .clk(clk), 
     .WE(MemWrite) ,
+    .DataSizeCon(DataSizeCon),
     .A(ALUResult) , //address of inistructoin
     .WD(WriteData) ,
     .RD(ReadData) 

@@ -30,7 +30,14 @@ module Register_File(
     output [63:0]RD1 ,
     output [63:0]RD2
     );
+    
     reg [63:0] reg_file [0:31];
+    
+//    integer i;
+//    initial begin
+//    for (i = 0; i<64; i = i+1)
+//     reg_file[i]=0;
+//     end  
     always@(posedge(clk))
     begin
         reg_file[0] <= 0;

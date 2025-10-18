@@ -24,37 +24,34 @@ module ALU(
     input [63:0] SrcA ,
     input [63:0] SrcB ,
     input [3:0]  ALUControl ,
+    input  SignExtension ,
+    input OP3,
     output [63:0] ALUResult ,
-    output Zero ,
-    output less_than ,
-    output less_than_unsigned
+    output Zero
     );
     reg [63:0]result ;
-    reg less_than_unsigned_reg ;
-    reg less_than_reg ;
+    reg [63:0] temp;
     always @(*) begin
         case(ALUControl)
         
-            4'b0000 : result = SrcA + SrcB ; //add
-            4'b0001 : result = SrcA - SrcB ; //sub
-            4'b0010 : result = SrcA & SrcB ; //and
-            4'b0011 : result = SrcA | SrcB ; //or
-            4'b0100 : result = SrcA ^ SrcB ; //xor          
-            4'b0101 : begin 
-                     result = (SrcA < SrcB) ; //sltu
-                     less_than_unsigned_reg = (SrcA < SrcB); //bltu  bgeu
-                     end
-            4'b0110 : begin
-                     result = ($signed(SrcA) < $signed(SrcB)) ; //slt
-                     less_than_reg = ($signed(SrcA) < $signed(SrcB)) ; //blt  bge
-                     end
-            default: result = SrcA;
-        endcase
+            4'b0000 : temp = SrcA + SrcB ; // ADD
+            4'b0001 : temp = SrcA - SrcB ; // SUB
+            4'b0010 : temp = SrcA & SrcB ; // AND
+            4'b0011 : temp = SrcA | SrcB ; // OR
+            4'b0100 : temp = SrcA ^ SrcB ; // XOR           
+            4'b0101 : temp = (SrcA < SrcB) ; // SLTU  
+            4'b0110 : temp = ($signed(SrcA) < $signed(SrcB)) ; // SLT
+            4'b0111 : temp = OP3? (SrcA[31:0] << SrcB) : (SrcA << SrcB); // SLL or SLLIW
+            4'b1000 : temp = OP3? (SrcA[31:0] >> SrcB) : (SrcA >> SrcB); // SRL or SRLIW 
+            4'b1001 : temp = OP3? ($signed(SrcA[31:0]) >>> SrcB) : ($signed(SrcA) >>> SrcB); // SRA or SRAIW
+            4'b1010 : temp = SrcB; // LUI
+            default: temp = SrcA;
+        endcase   
+        // Apply optional sign-extension for "word" shifts
+        result = SignExtension ? {{32{temp[31]}}, temp[31:0]} : temp;
     end
     assign ALUResult = result ;
     assign Zero = ~(|ALUResult) ;    //beq bne
-    assign less_than = less_than_reg;    //blt  bge
-    assign less_than_unsigned = less_than_unsigned_reg ;   //bltu  bgeu
 endmodule
 
 
@@ -70,7 +67,7 @@ endmodule
 //0111    sll /slla  
 //1000    sra
 //1001    srl
-//1010    addw
+//1010    lui
 
 
 

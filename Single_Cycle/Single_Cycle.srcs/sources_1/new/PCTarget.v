@@ -22,8 +22,8 @@
 
 module PCTarget(
     input  [63:0] ImmExt ,
-    input  [63:0] PC ,
+    input  [63:0] BaseTarget ,
     output [63:0]PCTarget
     );
-    assign PCTarget = PC + ImmExt ;
+    assign PCTarget = BaseTarget + ImmExt ;
 endmodule
