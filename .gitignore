@@ -1,20 +1,95 @@
-# Vivado project files
+# =============================================
+# Vivado Project & Build Artifacts
+# =============================================
+
+# Vivado project directories (recreated by scripts)
 *.xpr
 *.jou
 *.log
 *.str
+*.zip
 
-# Directories to ignore
-.runs/
-.ip/
-.Xil/
-.hw/
-.sim/
-.cache/
-
-# IP generated files
-*.ooc
-*.xci
+# Build directories (completely regenerated)
+*.cache/
+*.hw/
+*.sim/
+*.ip_user_files/
+*.runs/
+  synth_1/
+  impl_1/
+  
+# Vivado temporary files
+*.tmp
+*.debug
 
 # Checkpoint files
 *.dcp
+
+# Journal and log files
+*.jou
+*.log
+
+# =============================================
+# Version-Specific Generated Directories
+# =============================================
+
+# These are recreated by TCL scripts for each version
+project_2019.1/
+project_2021.1/ 
+project_2022.1/
+project_2023.1/
+project_2024.1/
+project_2025.1/
+
+# Pattern for any version-specific build directory
+project_*/
+
+# =============================================
+# IP Core Generated Files
+# =============================================
+
+# IP cache and generated files
+.ip_cache/
+*.xml
+*.html
+*.xci
+
+# But NOTE: Keep IP configuration files!
+# !ip/*.xci
+
+# =============================================
+# Simulation Files
+# =============================================
+
+# XSim simulation files
+xsim.dir/
+*.pb
+*.wdb
+*.wcfg
+
+# =============================================
+# Operating System & Editor Files
+# =============================================
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Editor files
+*.bak
+*~
+*.tmp
+
+# VS Code
+.vscode/
+
+# =============================================
+# Backup and Archive Files
+# =============================================
+
+*.bak
+*.backup
+*.zip
+*.tar.gz
