@@ -25,16 +25,12 @@ module ALU_Decoder(
     input  [2:0]funct3 ,
     input  op_5 ,
     input  funct7_5 ,
-    input  zero,
     input  op_3,
-    
     output OP3,
     output [3:0]ALUControl,
-    output [2:0]DataSizeCon,
-    output BranchFlag
+    output [2:0]funct3Control
     );
-    reg [3:0]ALUControl_Reg ;
-    reg BranchFlag_reg;
+    reg [3:0]ALUControl_Reg;
     always@(*)
     begin
      case(ALUOp)
@@ -44,27 +40,21 @@ module ALU_Decoder(
                  case(funct3)
                  3'b000: begin //BEQ
                          ALUControl_Reg = 4'b0001; // sub 
-                         BranchFlag_reg = zero;
                          end
                  3'b001: begin //BNE
                          ALUControl_Reg = 4'b0001; // sub 
-                         BranchFlag_reg = ~zero;
                          end
                  3'b100: begin //BLT
                          ALUControl_Reg = 4'b0101; // SLT
-                         BranchFlag_reg = ~zero;
                          end
                  3'b101: begin //BGE
                          ALUControl_Reg = 4'b0101; // SLT 
-                         BranchFlag_reg = zero;
                          end
                  3'b110: begin //BLTU
                          ALUControl_Reg = 4'b0100; // SLTU
-                         BranchFlag_reg = ~zero;
                          end
                  3'b111: begin //BGEU
                          ALUControl_Reg = 4'b0101; // SLTU
-                         BranchFlag_reg = zero;
                          end
                  default:ALUControl_Reg= 4'bx;
                  endcase
@@ -97,7 +87,6 @@ module ALU_Decoder(
      endcase
     end
     assign ALUControl = ALUControl_Reg ;
-    assign BranchFlag = BranchFlag_reg;
-    assign DataSizeCon = funct3;
+    assign funct3Control = funct3;
     assign OP3 = op_3;
 endmodule

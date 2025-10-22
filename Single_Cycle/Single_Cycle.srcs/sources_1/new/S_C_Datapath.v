@@ -23,7 +23,6 @@
 module S_C_Datapath(
     input clk ,
     input reset_n ,
-    input PCSrc ,
     input MemWrite ,
     input RegWrite ,
     input [1:0]ResultSrc ,
@@ -31,13 +30,14 @@ module S_C_Datapath(
     input ALUSrcB ,
     input [3:0]ALUControl ,
     input [2:0]ImmSrc ,
-    input  [2:0]DataSizeCon,
+    input  [2:0]funct3Control,
     input SignExtension,
     input OP3,
     input Target,
+    input Jump,
+    input Branch,
+    output [31:0] Instr_OUT
     
-    output [31:0] Instr_OUT ,
-    output Zero_Out
     );
     
     //PC WIRES
@@ -46,6 +46,7 @@ module S_C_Datapath(
     wire [63:0]PCNext ;
     wire [63:0]PC ;
     wire [63:0]BaseTarget;
+    wire PCSrc;
     
     //EXTEND WIRE
     wire [63:0]ImmExt ;
@@ -63,7 +64,8 @@ module S_C_Datapath(
     //assign SrcA = RD1 ;
     wire [63:0]SrcB ;
     wire [63:0]ALUResult ;
-    wire Zero ;
+    wire BranchFlag;
+
     
     //DM WIRES
     wire [63:0]WriteData ;
@@ -146,13 +148,15 @@ module S_C_Datapath(
     .ALUResult(ALUResult) ,
     .SignExtension(SignExtension),
     .OP3(OP3),
-    .Zero(Zero)
+    .Zero(),
+    .funct3Control(funct3Control),
+    .BranchFlag(BranchFlag)
     );
     
     Data_Memory DM_UNIT(
     .clk(clk), 
     .WE(MemWrite) ,
-    .DataSizeCon(DataSizeCon),
+    .DataSizeCon(funct3Control),
     .A(ALUResult) , //address of inistructoin
     .WD(WriteData) ,
     .RD(ReadData) 
@@ -168,5 +172,5 @@ module S_C_Datapath(
     
     //output to control unit 
     assign Instr_OUT = Instr ;
-    assign Zero_Out = Zero ;
+    assign PCSrc = ( (BranchFlag & Branch) | Jump ) ;
 endmodule

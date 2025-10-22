@@ -26,11 +26,14 @@ module ALU(
     input [3:0]  ALUControl ,
     input  SignExtension ,
     input OP3,
+    input [2:0]funct3Control,
+    output BranchFlag,
     output [63:0] ALUResult ,
     output Zero
     );
     reg [63:0]result ;
     reg [63:0] temp;
+    reg BranchFlag_reg;
     always @(*) begin
         case(ALUControl)
         
@@ -50,8 +53,32 @@ module ALU(
         // Apply optional sign-extension for "word" shifts
         result = SignExtension ? {{32{temp[31]}}, temp[31:0]} : temp;
     end
+    always @(*) begin
+    case(funct3Control)
+                 3'b000: begin //BEQ
+                         BranchFlag_reg = ~(|ALUResult);
+                         end
+                 3'b001: begin //BNE
+                         BranchFlag_reg = (|ALUResult);
+                         end
+                 3'b100: begin //BLT
+                         BranchFlag_reg = (|ALUResult);
+                         end
+                 3'b101: begin //BGE
+                         BranchFlag_reg = ~(|ALUResult);
+                         end
+                 3'b110: begin //BLTU
+                         BranchFlag_reg = (|ALUResult);
+                         end
+                 3'b111: begin //BGEU
+                         BranchFlag_reg = ~(|ALUResult);
+                         end
+                 default:BranchFlag_reg= 1'bx;
+                 endcase
+                 end
     assign ALUResult = result ;
     assign Zero = ~(|ALUResult) ;    //beq bne
+    assign BranchFlag = BranchFlag_reg;
 endmodule
 
 
