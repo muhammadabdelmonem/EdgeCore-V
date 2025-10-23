@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Single_Cycle_TOP_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Single_Cycle_TOP_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="385200002fs"></ZoomStartTime>
+      <ZoomEndTime time="545000003fs"></ZoomEndTime>
+      <Cursor1Time time="495000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="130"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="66" />
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/reset_n">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/T">
+      <obj_property name="ElementShortName">T[31:0]</obj_property>
+      <obj_property name="ObjectShortName">T[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PC_UNIT/PC">
+      <obj_property name="ElementShortName">PC[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PCF">
+      <obj_property name="ElementShortName">PCF[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PCF[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PCD">
+      <obj_property name="ElementShortName">PCD[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PCD[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PCE">
+      <obj_property name="ElementShortName">PCE[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PCE[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/InstrF">
+      <obj_property name="ElementShortName">InstrF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">InstrF[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/InstrD">
+      <obj_property name="ElementShortName">InstrD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">InstrD[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RF_UNIT/reg_file">
+      <obj_property name="ElementShortName">reg_file[0:31][63:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_file[0:31][63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/DM_UNIT/DATA_MEM">
+      <obj_property name="ElementShortName">DATA_MEM[0:1023][7:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_MEM[0:1023][7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/IM_UNIT/RD">
+      <obj_property name="ElementShortName">RD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RD[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RF_UNIT/A1">
+      <obj_property name="ElementShortName">A1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RF_UNIT/A2">
+      <obj_property name="ElementShortName">A2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">A2[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RF_UNIT/A3">
+      <obj_property name="ElementShortName">A3[4:0]</obj_property>
+      <obj_property name="ObjectShortName">A3[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RF_UNIT/RD1">
+      <obj_property name="ElementShortName">RD1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">RD1[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RF_UNIT/RD2">
+      <obj_property name="ElementShortName">RD2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">RD2[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PCSrcE">
+      <obj_property name="ElementShortName">PCSrcE</obj_property>
+      <obj_property name="ObjectShortName">PCSrcE</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/SrcA">
+      <obj_property name="ElementShortName">SrcA[63:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcA[63:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/SrcB">
+      <obj_property name="ElementShortName">SrcB[63:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcB[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALUResultE">
+      <obj_property name="ElementShortName">ALUResultE[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUResultE[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALUResultM">
+      <obj_property name="ElementShortName">ALUResultM[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUResultM[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ResultW">
+      <obj_property name="ElementShortName">ResultW[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ResultW[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RF_UNIT/WD3">
+      <obj_property name="ElementShortName">WD3[63:0]</obj_property>
+      <obj_property name="ObjectShortName">WD3[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RdD">
+      <obj_property name="ElementShortName">RdD[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RdD[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RdE">
+      <obj_property name="ElementShortName">RdE[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RdE[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RdM">
+      <obj_property name="ElementShortName">RdM[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RdM[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RdW">
+      <obj_property name="ElementShortName">RdW[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RdW[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RF_UNIT/A3">
+      <obj_property name="ElementShortName">A3[4:0]</obj_property>
+      <obj_property name="ObjectShortName">A3[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/ALUSrcA">
+      <obj_property name="ElementShortName">ALUSrcA</obj_property>
+      <obj_property name="ObjectShortName">ALUSrcA</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/ALUSrcB">
+      <obj_property name="ElementShortName">ALUSrcB</obj_property>
+      <obj_property name="ObjectShortName">ALUSrcB</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALUSrcAD">
+      <obj_property name="ElementShortName">ALUSrcAD</obj_property>
+      <obj_property name="ObjectShortName">ALUSrcAD</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALUSrcBD">
+      <obj_property name="ElementShortName">ALUSrcBD</obj_property>
+      <obj_property name="ObjectShortName">ALUSrcBD</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALUSrcAE">
+      <obj_property name="ElementShortName">ALUSrcAE</obj_property>
+      <obj_property name="ObjectShortName">ALUSrcAE</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PCE">
+      <obj_property name="ElementShortName">PCE[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PCE[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PCF">
+      <obj_property name="ElementShortName">PCF[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PCF[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PCD">
+      <obj_property name="ElementShortName">PCD[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PCD[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ResultSrcW">
+      <obj_property name="ElementShortName">ResultSrcW[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ResultSrcW[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RESULT_MUX_UNIT/sel">
+      <obj_property name="ElementShortName">sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RESULT_MUX_UNIT/in1">
+      <obj_property name="ElementShortName">in1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in1[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RESULT_MUX_UNIT/in2">
+      <obj_property name="ElementShortName">in2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in2[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RESULT_MUX_UNIT/in3">
+      <obj_property name="ElementShortName">in3[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in3[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RESULT_MUX_UNIT/out">
+      <obj_property name="ElementShortName">out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">out[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RESULT_MUX_UNIT/out_reg">
+      <obj_property name="ElementShortName">out_reg[63:0]</obj_property>
+      <obj_property name="ObjectShortName">out_reg[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/DM_UNIT/RD">
+      <obj_property name="ElementShortName">RD[63:0]</obj_property>
+      <obj_property name="ObjectShortName">RD[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ReadDataM">
+      <obj_property name="ElementShortName">ReadDataM[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ReadDataM[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ReadDataW">
+      <obj_property name="ElementShortName">ReadDataW[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ReadDataW[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/RegWriteW">
+      <obj_property name="ElementShortName">RegWriteW</obj_property>
+      <obj_property name="ObjectShortName">RegWriteW</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/RegWriteM">
+      <obj_property name="ElementShortName">RegWriteM</obj_property>
+      <obj_property name="ObjectShortName">RegWriteM</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/ResultSrc">
+      <obj_property name="ElementShortName">ResultSrc</obj_property>
+      <obj_property name="ObjectShortName">ResultSrc</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/RdW">
+      <obj_property name="ElementShortName">RdW[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RdW[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/RdM">
+      <obj_property name="ElementShortName">RdM[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RdM[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/Rs1E">
+      <obj_property name="ElementShortName">Rs1E[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Rs1E[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/Rs2E">
+      <obj_property name="ElementShortName">Rs2E[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Rs2E[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/RdE">
+      <obj_property name="ElementShortName">RdE[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RdE[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/Rs1D">
+      <obj_property name="ElementShortName">Rs1D[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Rs1D[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/Rs2D">
+      <obj_property name="ElementShortName">Rs2D[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Rs2D[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/PCSrcE">
+      <obj_property name="ElementShortName">PCSrcE</obj_property>
+      <obj_property name="ObjectShortName">PCSrcE</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/FlushD">
+      <obj_property name="ElementShortName">FlushD</obj_property>
+      <obj_property name="ObjectShortName">FlushD</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/FlushE">
+      <obj_property name="ElementShortName">FlushE</obj_property>
+      <obj_property name="ObjectShortName">FlushE</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/ForwardAE">
+      <obj_property name="ElementShortName">ForwardAE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ForwardAE[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/ForwardBE">
+      <obj_property name="ElementShortName">ForwardBE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ForwardBE[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/StallD">
+      <obj_property name="ElementShortName">StallD</obj_property>
+      <obj_property name="ObjectShortName">StallD</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/StallF">
+      <obj_property name="ElementShortName">StallF</obj_property>
+      <obj_property name="ObjectShortName">StallF</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/lwStall">
+      <obj_property name="ElementShortName">lwStall</obj_property>
+      <obj_property name="ObjectShortName">lwStall</obj_property>
+   </wvobject>
+</wave_config>
