@@ -45,13 +45,13 @@ module ALU_Decoder(
                          ALUControl_Reg = 4'b0001; // sub 
                          end
                  3'b100: begin //BLT
-                         ALUControl_Reg = 4'b0101; // SLT
+                         ALUControl_Reg = 4'b0110; // SLT
                          end
                  3'b101: begin //BGE
-                         ALUControl_Reg = 4'b0101; // SLT 
+                         ALUControl_Reg = 4'b0110; // SLT 
                          end
                  3'b110: begin //BLTU
-                         ALUControl_Reg = 4'b0100; // SLTU
+                         ALUControl_Reg = 4'b0101; // SLTU
                          end
                  3'b111: begin //BGEU
                          ALUControl_Reg = 4'b0101; // SLTU
