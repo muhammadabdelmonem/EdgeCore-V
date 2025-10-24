@@ -22,11 +22,11 @@
 
 module Hazard_Unit(
     input RegWriteW, RegWriteM,
-    input  ResultSrc,
+    input ResultSrc,
     input reset_n,
     input [4:0] RdW, RdM,
     input [4:0] Rs1E, Rs2E, RdE, Rs1D, Rs2D,
-    input PCSrcE,
+    input   PCSrcE,
     output  FlushD, FlushE,
     output  [1:0] ForwardAE, ForwardBE,
     output  StallD, StallF

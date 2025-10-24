@@ -31,10 +31,10 @@ module Forwarding_Unit(
     output reg [1:0]  ForwardBE
 );
 
-    always @(negedge reset_n) begin
+    always @(*) begin
       if(~reset_n) begin
-       ForwardAE <=0;
-       ForwardBE <=0;
+       ForwardAE =2'b00;
+       ForwardBE =2'b00;
       end
       else begin
       // Forwarding for A

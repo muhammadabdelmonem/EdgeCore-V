@@ -24,19 +24,19 @@ module Control_Hazard(
     input PCSrcE, lwStall,reset_n,
     output reg FlushD, FlushE
     );  
-    always@(negedge reset_n) 
+    always@(*) 
     begin
         if(~reset_n)
             begin
-            FlushD <= 0;
-            FlushE <= 0;
+            FlushD = 0;
+            FlushE = 0;
             
             end
          else
             begin
             
-            FlushD <= PCSrcE;
-            FlushE <= (lwStall | PCSrcE);
+            FlushD = PCSrcE;
+            FlushE = (lwStall | PCSrcE);
             end
         end
 endmodule

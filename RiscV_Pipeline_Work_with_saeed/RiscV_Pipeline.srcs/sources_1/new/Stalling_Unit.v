@@ -25,19 +25,19 @@ module Stalling_Unit(
     input ResultSrcE0,reset_n,
     output reg StallF, StallD, lwStall
     );
-    always@(negedge reset_n) 
+    always@(*) 
     begin
         if(~reset_n)
             begin
-             lwStall <= 0;
-             StallF <= 0;
-             StallD <= 0;
+             lwStall = 0;
+             StallF = 0;
+             StallD = 0;
             end
          else
             begin
-            lwStall <= ResultSrcE0 & ((Rs1D == RdE) | (Rs2D == RdE));
-            StallF <= lwStall;
-            StallD <= lwStall;
+            lwStall = ResultSrcE0 & ((Rs1D == RdE) | (Rs2D == RdE));
+            StallF = lwStall;
+            StallD = lwStall;
             
             end
         end

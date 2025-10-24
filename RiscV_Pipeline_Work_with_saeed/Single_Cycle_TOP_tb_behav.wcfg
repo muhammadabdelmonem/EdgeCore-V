@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="385200002fs"></ZoomStartTime>
-      <ZoomEndTime time="545000003fs"></ZoomEndTime>
-      <Cursor1Time time="495000000fs"></Cursor1Time>
+      <ZoomStartTime time="166666667fs"></ZoomStartTime>
+      <ZoomEndTime time="779369034fs"></ZoomEndTime>
+      <Cursor1Time time="365000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="130"></NameColumnWidth>
-      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+      <ValueColumnWidth column_width="80"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="66" />
+   <WVObjectSize size="69" />
    <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -65,7 +65,6 @@
    <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/DM_UNIT/DATA_MEM">
       <obj_property name="ElementShortName">DATA_MEM[0:1023][7:0]</obj_property>
       <obj_property name="ObjectShortName">DATA_MEM[0:1023][7:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/IM_UNIT/RD">
       <obj_property name="ElementShortName">RD[31:0]</obj_property>
@@ -98,7 +97,6 @@
    <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/SrcA">
       <obj_property name="ElementShortName">SrcA[63:0]</obj_property>
       <obj_property name="ObjectShortName">SrcA[63:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/SrcB">
       <obj_property name="ElementShortName">SrcB[63:0]</obj_property>
@@ -287,5 +285,17 @@
    <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/hazard_unit/lwStall">
       <obj_property name="ElementShortName">lwStall</obj_property>
       <obj_property name="ObjectShortName">lwStall</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/FlushD">
+      <obj_property name="ElementShortName">FlushD</obj_property>
+      <obj_property name="ObjectShortName">FlushD</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/FlushE">
+      <obj_property name="ElementShortName">FlushE</obj_property>
+      <obj_property name="ObjectShortName">FlushE</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PCSrcE">
+      <obj_property name="ElementShortName">PCSrcE</obj_property>
+      <obj_property name="ObjectShortName">PCSrcE</obj_property>
    </wvobject>
 </wave_config>
