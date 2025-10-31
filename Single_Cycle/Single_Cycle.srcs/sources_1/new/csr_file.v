@@ -67,19 +67,7 @@ module csr_file(
     
     assign csr_rdata = csr_rdata_reg;
     
-    reg exception_armed;
-
-    always @(posedge clk or negedge reset_n) 
-    begin
-        if (!reset_n)
-            exception_armed <= 1'b0;
-        else if (exception_en && !exception_armed)
-            exception_armed <= 1'b1;
-        else if (!exception_en)
-            exception_armed <= 1'b0;
-        end
-        
-        wire exception_pulse = exception_en && !exception_armed;
+   
     
     always @(posedge clk or negedge reset_n) //should we make the reset synchronous?
         begin
@@ -93,7 +81,7 @@ module csr_file(
                 end
             else
                 begin
-                    if (exception_pulse)
+                    if (exception_en)
                     begin
                         mtval_reg  <= mtval_content;
                         mcause_reg <= {60'b0, exception_code};
