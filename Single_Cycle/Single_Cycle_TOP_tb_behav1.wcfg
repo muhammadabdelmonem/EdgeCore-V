@@ -11,15 +11,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="479.670 ns"></ZoomStartTime>
-      <ZoomEndTime time="559.494 ns"></ZoomEndTime>
-      <Cursor1Time time="521.520 ns"></Cursor1Time>
+      <ZoomStartTime time="141.810 ns"></ZoomStartTime>
+      <ZoomEndTime time="182.311 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="73"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <NameColumnWidth column_width="225"></NameColumnWidth>
+      <ValueColumnWidth column_width="115"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="28" />
+   <WVObjectSize size="35" />
+   <wave_markers>
+      <marker time="167320" label="" />
+   </wave_markers>
    <wvobject fp_name="/Single_Cycle_TOP_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -35,110 +38,134 @@
    <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PC_UNIT/PC" type="array">
       <obj_property name="ElementShortName">PC[63:0]</obj_property>
       <obj_property name="ObjectShortName">PC[63:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RF_UNIT/reg_file" type="array">
       <obj_property name="ElementShortName">reg_file[0:31][63:0]</obj_property>
       <obj_property name="ObjectShortName">reg_file[0:31][63:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/DM_UNIT/DATA_MEM" type="array">
-      <obj_property name="ElementShortName">DATA_MEM[0:1023][7:0]</obj_property>
-      <obj_property name="ObjectShortName">DATA_MEM[0:1023][7:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/mtvec" type="array">
+      <obj_property name="ElementShortName">mtvec[63:0]</obj_property>
+      <obj_property name="ObjectShortName">mtvec[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/SrcA" type="array">
-      <obj_property name="ElementShortName">SrcA[63:0]</obj_property>
-      <obj_property name="ObjectShortName">SrcA[63:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/SrcB" type="array">
-      <obj_property name="ElementShortName">SrcB[63:0]</obj_property>
-      <obj_property name="ObjectShortName">SrcB[63:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/ALUControl" type="array">
-      <obj_property name="ElementShortName">ALUControl[3:0]</obj_property>
-      <obj_property name="ObjectShortName">ALUControl[3:0]</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/funct3" type="array">
+      <obj_property name="ElementShortName">funct3[2:0]</obj_property>
+      <obj_property name="ObjectShortName">funct3[2:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/SignExtension" type="logic">
-      <obj_property name="ElementShortName">SignExtension</obj_property>
-      <obj_property name="ObjectShortName">SignExtension</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/csr_we" type="logic">
+      <obj_property name="ElementShortName">csr_we</obj_property>
+      <obj_property name="ObjectShortName">csr_we</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/ALUResult" type="array">
-      <obj_property name="ElementShortName">ALUResult[63:0]</obj_property>
-      <obj_property name="ObjectShortName">ALUResult[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/Zero" type="logic">
-      <obj_property name="ElementShortName">Zero</obj_property>
-      <obj_property name="ObjectShortName">Zero</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/result" type="array">
-      <obj_property name="ElementShortName">result[63:0]</obj_property>
-      <obj_property name="ObjectShortName">result[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/temp" type="array">
-      <obj_property name="ElementShortName">temp[63:0]</obj_property>
-      <obj_property name="ObjectShortName">temp[63:0]</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/imm12" type="array">
+      <obj_property name="ElementShortName">imm12[11:0]</obj_property>
+      <obj_property name="ObjectShortName">imm12[11:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/SrcA" type="array">
-      <obj_property name="ElementShortName">SrcA[63:0]</obj_property>
-      <obj_property name="ObjectShortName">SrcA[63:0]</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/CSR_UNIT/source_data" type="array">
+      <obj_property name="ElementShortName">source_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">source_data[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/SrcB" type="array">
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/CSR_UNIT/new_value" type="array">
+      <obj_property name="ElementShortName">new_value[63:0]</obj_property>
+      <obj_property name="ObjectShortName">new_value[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/CSR_UNIT/csr_wdata" type="array">
+      <obj_property name="ElementShortName">csr_wdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_wdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/CSR_UNIT/csr_rdata" type="array">
+      <obj_property name="ElementShortName">csr_rdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_rdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/mret" type="logic">
+      <obj_property name="ElementShortName">mret</obj_property>
+      <obj_property name="ObjectShortName">mret</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/exception_en" type="logic">
+      <obj_property name="ElementShortName">exception_en</obj_property>
+      <obj_property name="ObjectShortName">exception_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RF_UNIT/RD1" type="array">
+      <obj_property name="ElementShortName">RD1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">RD1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/RF_UNIT/RD2" type="array">
+      <obj_property name="ElementShortName">RD2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">RD2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALUResult" type="array">
+      <obj_property name="ElementShortName">ALUResult[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUResult[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/SrcB" type="array">
       <obj_property name="ElementShortName">SrcB[63:0]</obj_property>
       <obj_property name="ObjectShortName">SrcB[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/ALUControl" type="array">
-      <obj_property name="ElementShortName">ALUControl[3:0]</obj_property>
-      <obj_property name="ObjectShortName">ALUControl[3:0]</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALUSrcB" type="logic">
+      <obj_property name="ElementShortName">ALUSrcB</obj_property>
+      <obj_property name="ObjectShortName">ALUSrcB</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/SignExtension" type="logic">
-      <obj_property name="ElementShortName">SignExtension</obj_property>
-      <obj_property name="ObjectShortName">SignExtension</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/OP3" type="logic">
-      <obj_property name="ElementShortName">OP3</obj_property>
-      <obj_property name="ObjectShortName">OP3</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/ALUResult" type="array">
-      <obj_property name="ElementShortName">ALUResult[63:0]</obj_property>
-      <obj_property name="ObjectShortName">ALUResult[63:0]</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ResultSrc" type="array">
+      <obj_property name="ElementShortName">ResultSrc[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ResultSrc[1:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/Zero" type="logic">
-      <obj_property name="ElementShortName">Zero</obj_property>
-      <obj_property name="ObjectShortName">Zero</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Result" type="array">
+      <obj_property name="ElementShortName">Result[63:0]</obj_property>
+      <obj_property name="ObjectShortName">Result[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/result" type="array">
-      <obj_property name="ElementShortName">result[63:0]</obj_property>
-      <obj_property name="ObjectShortName">result[63:0]</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/CSR_UNIT/csr_wdata" type="array">
+      <obj_property name="ElementShortName">csr_wdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_wdata[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/temp" type="array">
-      <obj_property name="ElementShortName">temp[63:0]</obj_property>
-      <obj_property name="ObjectShortName">temp[63:0]</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/CSR_UNIT/csr_rdata" type="array">
+      <obj_property name="ElementShortName">csr_rdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_rdata[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PC_TARGET_UNIT/PCTarget" type="array">
-      <obj_property name="ElementShortName">PCTarget[63:0]</obj_property>
-      <obj_property name="ObjectShortName">PCTarget[63:0]</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/csr_flag" type="logic">
+      <obj_property name="ElementShortName">csr_flag</obj_property>
+      <obj_property name="ObjectShortName">csr_flag</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/BranchFlag" type="logic">
-      <obj_property name="ElementShortName">BranchFlag</obj_property>
-      <obj_property name="ObjectShortName">BranchFlag</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/EXC_DECOD/addr_misaligned_flag" type="logic">
+      <obj_property name="ElementShortName">addr_misaligned_flag</obj_property>
+      <obj_property name="ObjectShortName">addr_misaligned_flag</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PCSrc" type="logic">
-      <obj_property name="ElementShortName">PCSrc</obj_property>
-      <obj_property name="ObjectShortName">PCSrc</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/EXC_DECOD/ecall_flag" type="logic">
+      <obj_property name="ElementShortName">ecall_flag</obj_property>
+      <obj_property name="ObjectShortName">ecall_flag</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/BranchFlag_reg" type="logic">
-      <obj_property name="ElementShortName">BranchFlag_reg</obj_property>
-      <obj_property name="ObjectShortName">BranchFlag_reg</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/EXC_DECOD/pc_misaligned_flag" type="logic">
+      <obj_property name="ElementShortName">pc_misaligned_flag</obj_property>
+      <obj_property name="ObjectShortName">pc_misaligned_flag</obj_property>
    </wvobject>
-   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/ALU_UNIT/funct3Control" type="array">
-      <obj_property name="ElementShortName">funct3Control[2:0]</obj_property>
-      <obj_property name="ObjectShortName">funct3Control[2:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/EXC_DECOD/ebreak_flag" type="logic">
+      <obj_property name="ElementShortName">ebreak_flag</obj_property>
+      <obj_property name="ObjectShortName">ebreak_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/EXC_DECOD/illegal_instr_flag" type="logic">
+      <obj_property name="ElementShortName">illegal_instr_flag</obj_property>
+      <obj_property name="ObjectShortName">illegal_instr_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/CSR_UNIT/mcause" type="array">
+      <obj_property name="ElementShortName">mcause[63:0]</obj_property>
+      <obj_property name="ObjectShortName">mcause[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/CSR_UNIT/mepc" type="array">
+      <obj_property name="ElementShortName">mepc[63:0]</obj_property>
+      <obj_property name="ObjectShortName">mepc[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/Exception_Handler_UNIT/CSR_UNIT/mtval" type="array">
+      <obj_property name="ElementShortName">mtval[63:0]</obj_property>
+      <obj_property name="ObjectShortName">mtval[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PCExceptionTarget" type="array">
+      <obj_property name="ElementShortName">PCExceptionTarget[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PCExceptionTarget[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Single_Cycle_TOP_tb/S_C_UUT/DATAPATH_TOP/PCNext_pre" type="array">
+      <obj_property name="ElementShortName">PCNext_pre[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PCNext_pre[63:0]</obj_property>
    </wvobject>
 </wave_config>

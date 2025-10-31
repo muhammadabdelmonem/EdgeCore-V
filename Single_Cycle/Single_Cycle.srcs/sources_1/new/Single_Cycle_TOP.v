@@ -40,6 +40,9 @@ module Single_Cycle_TOP(
     wire SignExtension;
     wire OP3;
     wire Target;
+    wire system_instr;
+    wire illegal_instr;
+    wire csr_we;
     
     S_C_Control CONTROL_TOP(
     .Instr_In(Instr) ,
@@ -55,7 +58,10 @@ module Single_Cycle_TOP(
     .funct3Control(funct3Control),
     .SignExtension(SignExtension),
     .OP3(OP3),
-    .Target(Target)
+    .Target(Target),
+    .system_instr(system_instr),
+    .illegal_instr(illegal_instr),
+    .csr_we(csr_we)
     );
     
     S_C_Datapath DATAPATH_TOP(
@@ -74,7 +80,10 @@ module Single_Cycle_TOP(
     .Instr_OUT(Instr) ,
     .Target(Target),
     .Jump(Jump),
-    .Branch(Branch)
+    .Branch(Branch),
+    .system_instr(system_instr),
+    .illegal_instr(illegal_instr),
+    .csr_we(csr_we)
     );
       
 endmodule

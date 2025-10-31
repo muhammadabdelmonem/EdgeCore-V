@@ -36,6 +36,11 @@ module S_C_Datapath(
     input Target,
     input Jump,
     input Branch,
+    
+    input system_instr,
+    input illegal_instr,
+    input csr_we,
+    
     output [31:0] Instr_OUT
     
     );
@@ -48,6 +53,10 @@ module S_C_Datapath(
     wire [63:0]BaseTarget;
     wire PCSrc;
     
+    wire [63:0] PCNext_pre;
+    wire [63:0] PCExceptionTarget;
+    
+    
     //EXTEND WIRE
     wire [63:0]ImmExt ;
     
@@ -57,6 +66,7 @@ module S_C_Datapath(
     //RFWIRES
     wire [63:0]RD1;
     wire [63:0]RD2;
+    wire [63:0]ResultRF;
     wire [63:0]Result ;
     
     //ALU WIRES
@@ -72,6 +82,14 @@ module S_C_Datapath(
     assign WriteData = RD2 ;
     wire [63:0]ReadData ;
     
+    //EXCEPTION WIRES
+    wire mret;
+    wire [63:0] mtvec;
+    wire [63:0] mepc;
+    wire exception_en;
+    wire csr_flag;
+    assign csr_flag = exception_en | csr_we;
+    wire [63:0]ResultCSR;
     
     PCPlus4 PC_PLUS4_UNIT(
     .PC(PC) ,
@@ -85,17 +103,34 @@ module S_C_Datapath(
     .out(BaseTarget)
     );
     
+    // Normal PC flow: branch/jump or sequential
     PCTarget PC_TARGET_UNIT(
     .ImmExt(ImmExt) ,
     .BaseTarget(BaseTarget) ,
     .PCTarget(PCTarget)
     );
     
+    // Select between mtvec (exception) and mepc (mret)
+    mux2x1 PC_EXCEPTION_TARGET_MUX (
+    .sel(mret),          
+    .in1(mtvec),
+    .in2(mepc),
+    .out(PCExceptionTarget)
+     );
+     
+     // Final PC selection: normal or exception
+     mux2x1 PC_EXCEPTION_FINAL_MUX (
+    .sel(exception_en | mret),      
+    .in1(PCNext_pre),
+    .in2(PCExceptionTarget),
+    .out(PCNext)
+     );
+    
     mux2x1 PC_MUX_UNIT(
     .sel(PCSrc) ,
     .in1(PCPlus4) ,
     .in2(PCTarget) ,
-    .out(PCNext)
+    .out(PCNext_pre)
     );
     
     PC PC_UNIT(
@@ -167,10 +202,39 @@ module S_C_Datapath(
     .in1(ALUResult) ,
     .in2(ReadData) ,
     .in3(PCPlus4) ,
+    .out(ResultRF)
+    );
+    
+     mux2x1 RESULT_RF_CSR(
+    .sel(csr_flag) ,
+    .in1(ResultRF) ,
+    .in2(ResultCSR) ,
     .out(Result)
     );
     
+    
+    // Exception handling
+    Exception_Handler Exception_Handler_UNIT (
+    .clk(clk),
+    .reset_n(reset_n),
+    .system_instr(system_instr),
+    .illegal_instr(illegal_instr),
+    .PCTarget(PCTarget),
+    .MemAddr(ALUResult),
+    .funct3(funct3Control),
+    .current_pc(PC),
+    .instr(Instr),
+    .csr_rdata(ResultCSR),
+    .csr_wdata(RD1),
+    .exception_en(exception_en),
+    .csr_we(csr_we),
+    .mret(mret),
+    .flush(),
+    .mepc(mepc),
+    .mtvec(mtvec)
+    );
+    
     //output to control unit 
-    assign Instr_OUT = Instr ;
+    assign Instr_OUT = Instr;
     assign PCSrc = ( (BranchFlag & Branch) | Jump ) ;
 endmodule

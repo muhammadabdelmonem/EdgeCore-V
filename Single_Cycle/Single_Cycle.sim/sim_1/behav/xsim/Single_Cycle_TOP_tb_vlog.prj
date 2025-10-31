@@ -5,7 +5,6 @@ verilog xil_defaultlib  --include "../../../../../../../../../../../../Xilinx/20
 "../../../../Single_Cycle.srcs/sources_1/new/Data_Memory.v" \
 "../../../../Single_Cycle.srcs/sources_1/new/Extend.v" \
 "../../../../Single_Cycle.srcs/sources_1/new/Instruction_Memory.v" \
-"../../../../Single_Cycle.srcs/sources_1/new/Main_Decoder.v" \
 "../../../../Single_Cycle.srcs/sources_1/new/PC.v" \
 "../../../../Single_Cycle.srcs/sources_1/new/PCPlus4.v" \
 "../../../../Single_Cycle.srcs/sources_1/new/PCTarget.v" \
@@ -17,6 +16,11 @@ verilog xil_defaultlib  --include "../../../../../../../../../../../../Xilinx/20
 "../../../../Single_Cycle.srcs/sources_1/new/Single_Cycle_TOP.v" \
 "../../../../Single_Cycle.srcs/sources_1/new/CLA_4bit.v" \
 "../../../../Single_Cycle.srcs/sources_1/new/CLA_32bit.v" \
+"../../../../../../../../../../Downloads/Main_Decoder.v" \
+"../../../../Single_Cycle.srcs/sources_1/new/csr_file.v" \
+"../../../../Single_Cycle.srcs/sources_1/new/Exception_decoder.v" \
+"../../../../Single_Cycle.srcs/sources_1/new/Exception_Controller.v" \
+"../../../../Single_Cycle.srcs/sources_1/new/Exception_Handler.v" \
 "../../../../Single_Cycle.srcs/sim_1/new/Extend_tb.v" \
 "../../../../Single_Cycle.srcs/sim_1/new/Data_Memory_tb.v" \
 "../../../../Single_Cycle.srcs/sim_1/new/ALU_tb.v" \

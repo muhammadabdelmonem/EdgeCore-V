@@ -35,7 +35,11 @@ module S_C_Control(
     output SignExtension,
     output Target,
     output Jump,
-    output Branch 
+    output Branch,
+    
+    output illegal_instr,
+    output system_instr,
+    output csr_we 
     );
     
     //Wires
@@ -64,7 +68,10 @@ module S_C_Control(
     .ALUOp(ALUOp) ,
     .Jump(Jump),
     .SignExtension(SignExtension) ,
-    .Target(Target)
+    .Target(Target),
+    .system_instr(system_instr),
+    .illegal_instr(illegal_instr),
+    .csr_write_en(csr_we)
     );
     
     ALU_Decoder ALU_DECOD_UNIT(
