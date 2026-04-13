@@ -21,18 +21,36 @@
 
 
 module PC(
-    input clk ,
-    input reset_n ,
-    input [63:0]PCNext ,
-    output [63:0]PC
+    input clk,
+    input reset_n,
+    input [63:0] PCNext,
+    output [63:0] PC,
+    input EN,
+    input CLR,
+    input Mispred
     );
-    reg [63:0] pc_reg ;
-    always@(posedge(clk),negedge(reset_n))
+    
+    reg [63:0] pc_reg;
+    
+//    assign EN = 0;
+    
+    always@(posedge clk, negedge reset_n)
+    
     begin
         if(~reset_n)
-            pc_reg <= 0 ;
-        else
-            pc_reg <= PCNext ;
+            pc_reg <= 0;
+        else if (CLR)
+            begin
+            pc_reg <= 64'b0;
+            end
+        else if (~EN && Mispred)
+            begin
+            pc_reg <= PCNext;
+            end
+        else if (EN)
+            begin
+            pc_reg <= PCNext;
+            end
     end
     assign PC = pc_reg ;
 endmodule

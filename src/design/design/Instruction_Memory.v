@@ -28,8 +28,13 @@ module Instruction_Memory
     reg  [7:0] INS_MEM [0:depth-1] ; //[7:0] to be word addressable 
     initial 
     begin
-//      $readmemh("C:/Users/AHMED SAEED/Desktop/Jump.mem",INS_MEM) ;
-    $readmemh("test.mem",INS_MEM) ;
+//    $readmemh("C:/Users/AHMED SAEED/Desktop/branch_predict.mem",INS_MEM) ;
+//<<<<<<<< HEAD:src/design/Instruction_Memory.v
+   // $readmemh("C:/Users/AHMED SAEED/Desktop/TEST.hex",INS_MEM) ;
+//    $readmemh("test.mem",INS_MEM)
+//    $readmemh("C:/Users/AHMED SAEED/Desktop/TEST.hex",INS_MEM) ;
+    $readmemh("test.mem",INS_MEM);
+//>>>>>>>> 3714120dbd3e3d93e2ba1ef632f287afed1dfb37:RiscV64IM/Src/Instruction_Memory.v
     end
     assign RD = {INS_MEM [A+3],INS_MEM [A+2],INS_MEM [A+1],INS_MEM [A]} ;
 endmodule

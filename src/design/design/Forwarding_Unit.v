@@ -22,6 +22,7 @@
 module Forwarding_Unit(
     input             RegWriteM,
     input             RegWriteW,
+    input             reset_n,
     input      [4:0]  Rs1E,
     input      [4:0]  Rs2E,
     input      [4:0]  RdM,
@@ -31,7 +32,12 @@ module Forwarding_Unit(
 );
 
     always @(*) begin
-        // Forwarding for A
+      if(~reset_n) begin
+       ForwardAE =2'b00;
+       ForwardBE =2'b00;
+      end
+      else begin
+      // Forwarding for A
         if (((Rs1E == RdM) && RegWriteM) && (Rs1E != 0)) begin
             ForwardAE = 2'b10;
         end
@@ -52,6 +58,9 @@ module Forwarding_Unit(
         else begin
             ForwardBE = 2'b00;
         end
+      
+      end
+        
     end
 
 endmodule

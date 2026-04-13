@@ -33,8 +33,10 @@ module mux3x1(
             2'b00: out_reg = in1;
             2'b01: out_reg = in2;
             2'b10: out_reg = in3;
-            default: out_reg = 64'b0; 
+            //default: out_reg = 64'b0; 
+            default: out_reg = in1;
         endcase
+    
     end
     assign out = out_reg ;
 endmodule
