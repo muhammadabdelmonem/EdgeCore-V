@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="CPU_System_Top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="CPU_System_Top_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="222.300 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,132.302 ns"></ZoomEndTime>
+      <Cursor1Time time="10,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="238"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="64" />
+   <wave_markers>
+      <marker time="580000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/CPU_System_Top_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/reset_n" type="logic">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/PCF" type="array">
+      <obj_property name="ElementShortName">PCF[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PCF[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/PCD" type="array">
+      <obj_property name="ElementShortName">PCD[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PCD[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/PCE" type="array">
+      <obj_property name="ElementShortName">PCE[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PCE[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/PCM" type="array">
+      <obj_property name="ElementShortName">PCM[63:0]</obj_property>
+      <obj_property name="ObjectShortName">PCM[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/TargetMem" type="array">
+      <obj_property name="ElementShortName">TargetMem[1:0]</obj_property>
+      <obj_property name="ObjectShortName">TargetMem[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/dma_start" type="logic">
+      <obj_property name="ElementShortName">dma_start</obj_property>
+      <obj_property name="ObjectShortName">dma_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/hazard_unit/dma_lw_stall" type="logic">
+      <obj_property name="ElementShortName">dma_lw_stall</obj_property>
+      <obj_property name="ObjectShortName">dma_lw_stall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/dma_busy" type="logic">
+      <obj_property name="ElementShortName">dma_busy</obj_property>
+      <obj_property name="ObjectShortName">dma_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/hazard_unit/lwStall" type="logic">
+      <obj_property name="ElementShortName">lwStall</obj_property>
+      <obj_property name="ObjectShortName">lwStall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/FlushM" type="logic">
+      <obj_property name="ElementShortName">FlushM</obj_property>
+      <obj_property name="ObjectShortName">FlushM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/FlushD" type="logic">
+      <obj_property name="ElementShortName">FlushD</obj_property>
+      <obj_property name="ObjectShortName">FlushD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/FlushE" type="logic">
+      <obj_property name="ElementShortName">FlushE</obj_property>
+      <obj_property name="ObjectShortName">FlushE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/StallF" type="logic">
+      <obj_property name="ElementShortName">StallF</obj_property>
+      <obj_property name="ObjectShortName">StallF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/StallD" type="logic">
+      <obj_property name="ElementShortName">StallD</obj_property>
+      <obj_property name="ObjectShortName">StallD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/StallE" type="logic">
+      <obj_property name="ElementShortName">StallE</obj_property>
+      <obj_property name="ObjectShortName">StallE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/StallM" type="logic">
+      <obj_property name="ElementShortName">StallM</obj_property>
+      <obj_property name="ObjectShortName">StallM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/RF_UNIT/reg_file" type="array">
+      <obj_property name="ElementShortName">reg_file[0:31][63:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_file[0:31][63:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="group359" type="group">
+      <obj_property name="label">DMA_R_Handshake</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/rvalid" type="logic">
+         <obj_property name="ElementShortName">rvalid</obj_property>
+         <obj_property name="ObjectShortName">rvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/current_state" type="array">
+         <obj_property name="ElementShortName">current_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/TargetMem" type="array">
+         <obj_property name="ElementShortName">TargetMem[1:0]</obj_property>
+         <obj_property name="ObjectShortName">TargetMem[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/MEM_SEL/Target" type="logic">
+         <obj_property name="ElementShortName">Target</obj_property>
+         <obj_property name="ObjectShortName">Target</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MemReadM" type="logic">
+         <obj_property name="ElementShortName">MemReadM</obj_property>
+         <obj_property name="ObjectShortName">MemReadM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/Addr_DECOD/inside_re" type="logic">
+         <obj_property name="ElementShortName">inside_re</obj_property>
+         <obj_property name="ObjectShortName">inside_re</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/Addr_DECOD/outside_re" type="logic">
+         <obj_property name="ElementShortName">outside_re</obj_property>
+         <obj_property name="ObjectShortName">outside_re</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/MEM_SEL/rready" type="logic">
+         <obj_property name="ElementShortName">rready</obj_property>
+         <obj_property name="ObjectShortName">rready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/rready_latched" type="logic">
+         <obj_property name="ElementShortName">rready_latched</obj_property>
+         <obj_property name="ObjectShortName">rready_latched</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/valid" type="logic">
+         <obj_property name="ElementShortName">valid</obj_property>
+         <obj_property name="ObjectShortName">valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/dma_re" type="logic">
+         <obj_property name="ElementShortName">dma_re</obj_property>
+         <obj_property name="ObjectShortName">dma_re</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/req_re" type="logic">
+         <obj_property name="ElementShortName">req_re</obj_property>
+         <obj_property name="ObjectShortName">req_re</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/re" type="logic">
+         <obj_property name="ElementShortName">re</obj_property>
+         <obj_property name="ObjectShortName">re</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/addr" type="array">
+         <obj_property name="ElementShortName">addr[12:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/MEM_SEL/Target" type="logic">
+         <obj_property name="ElementShortName">Target</obj_property>
+         <obj_property name="ObjectShortName">Target</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/rdata" type="array">
+         <obj_property name="ElementShortName">rdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">rdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/DataSizeCon" type="array">
+         <obj_property name="ElementShortName">DataSizeCon[2:0]</obj_property>
+         <obj_property name="ObjectShortName">DataSizeCon[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/current_state" type="array">
+         <obj_property name="ElementShortName">current_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/external_rdata" type="array">
+         <obj_property name="ElementShortName">external_rdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">external_rdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/dma_rdata_cpu" type="array">
+         <obj_property name="ElementShortName">dma_rdata_cpu[63:0]</obj_property>
+         <obj_property name="ObjectShortName">dma_rdata_cpu[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/req_rdata" type="array">
+         <obj_property name="ElementShortName">req_rdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">req_rdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/ResultSrcW" type="array">
+         <obj_property name="ElementShortName">ResultSrcW[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ResultSrcW[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/ResultW" type="array">
+         <obj_property name="ElementShortName">ResultW[63:0]</obj_property>
+         <obj_property name="ObjectShortName">ResultW[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/OutToMuxA" type="array">
+         <obj_property name="ElementShortName">OutToMuxA[63:0]</obj_property>
+         <obj_property name="ObjectShortName">OutToMuxA[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/ResultRF_W" type="array">
+         <obj_property name="ElementShortName">ResultRF_W[63:0]</obj_property>
+         <obj_property name="ObjectShortName">ResultRF_W[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/ReadDataM" type="array">
+         <obj_property name="ElementShortName">ReadDataM[63:0]</obj_property>
+         <obj_property name="ObjectShortName">ReadDataM[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/ReadDataW" type="array">
+         <obj_property name="ElementShortName">ReadDataW[63:0]</obj_property>
+         <obj_property name="ObjectShortName">ReadDataW[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/dma_rdata_cpu" type="array">
+         <obj_property name="ElementShortName">dma_rdata_cpu[63:0]</obj_property>
+         <obj_property name="ObjectShortName">dma_rdata_cpu[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/spm_rdata_cpu" type="array">
+         <obj_property name="ElementShortName">spm_rdata_cpu[63:0]</obj_property>
+         <obj_property name="ObjectShortName">spm_rdata_cpu[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/cpu_rdata" type="array">
+         <obj_property name="ElementShortName">cpu_rdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">cpu_rdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/ReadDataM" type="array">
+         <obj_property name="ElementShortName">ReadDataM[63:0]</obj_property>
+         <obj_property name="ObjectShortName">ReadDataM[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/cpu_addr" type="array">
+         <obj_property name="ElementShortName">cpu_addr[63:0]</obj_property>
+         <obj_property name="ObjectShortName">cpu_addr[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/req_addr" type="array">
+         <obj_property name="ElementShortName">req_addr[63:0]</obj_property>
+         <obj_property name="ObjectShortName">req_addr[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/addr" type="array">
+         <obj_property name="ElementShortName">addr[5:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/rdata" type="array">
+         <obj_property name="ElementShortName">rdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">rdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/rready" type="logic">
+         <obj_property name="ElementShortName">rready</obj_property>
+         <obj_property name="ObjectShortName">rready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/valid" type="logic">
+         <obj_property name="ElementShortName">valid</obj_property>
+         <obj_property name="ObjectShortName">valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/STATUS" type="array">
+         <obj_property name="ElementShortName">STATUS[63:0]</obj_property>
+         <obj_property name="ObjectShortName">STATUS[63:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="group122" type="group">
+      <obj_property name="label">DMA_W_Hanshake</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/current_state" type="array">
+         <obj_property name="ElementShortName">current_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/TargetMem" type="array">
+         <obj_property name="ElementShortName">TargetMem[1:0]</obj_property>
+         <obj_property name="ObjectShortName">TargetMem[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/req_targetmem" type="array">
+         <obj_property name="ElementShortName">req_targetmem[1:0]</obj_property>
+         <obj_property name="ObjectShortName">req_targetmem[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/Addr_DECOD/MemWriteM" type="logic">
+         <obj_property name="ElementShortName">MemWriteM</obj_property>
+         <obj_property name="ObjectShortName">MemWriteM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/WriteDataM" type="array">
+         <obj_property name="ElementShortName">WriteDataM[63:0]</obj_property>
+         <obj_property name="ObjectShortName">WriteDataM[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/Addr_DECOD/inside_we" type="logic">
+         <obj_property name="ElementShortName">inside_we</obj_property>
+         <obj_property name="ObjectShortName">inside_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/Addr_DECOD/outside_we" type="logic">
+         <obj_property name="ElementShortName">outside_we</obj_property>
+         <obj_property name="ObjectShortName">outside_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/ready" type="logic">
+         <obj_property name="ElementShortName">ready</obj_property>
+         <obj_property name="ObjectShortName">ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/valid" type="logic">
+         <obj_property name="ElementShortName">valid</obj_property>
+         <obj_property name="ObjectShortName">valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/MEM_SEL/dma_we" type="logic">
+         <obj_property name="ElementShortName">dma_we</obj_property>
+         <obj_property name="ObjectShortName">dma_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/req_we" type="logic">
+         <obj_property name="ElementShortName">req_we</obj_property>
+         <obj_property name="ObjectShortName">req_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/cpu_wdata" type="array">
+         <obj_property name="ElementShortName">cpu_wdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">cpu_wdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/req_wdata" type="array">
+         <obj_property name="ElementShortName">req_wdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">req_wdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/cpu_addr" type="array">
+         <obj_property name="ElementShortName">cpu_addr[63:0]</obj_property>
+         <obj_property name="ObjectShortName">cpu_addr[63:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/CPU/DATAPATH_TOP/MEM_Interface/req_addr" type="array">
+         <obj_property name="ElementShortName">req_addr[63:0]</obj_property>
+         <obj_property name="ObjectShortName">req_addr[63:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/addr" type="array">
+         <obj_property name="ElementShortName">addr[5:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/dma_addr" type="array">
+         <obj_property name="ElementShortName">dma_addr[12:0]</obj_property>
+         <obj_property name="ObjectShortName">dma_addr[12:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/dma_rdata" type="array">
+         <obj_property name="ElementShortName">dma_rdata[127:0]</obj_property>
+         <obj_property name="ObjectShortName">dma_rdata[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/spm_addr" type="array">
+         <obj_property name="ElementShortName">spm_addr[63:0]</obj_property>
+         <obj_property name="ObjectShortName">spm_addr[63:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/M_AXI_WDATA" type="array">
+         <obj_property name="ElementShortName">M_AXI_WDATA[127:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_WDATA[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/S_AXI_WDATA" type="array">
+         <obj_property name="ElementShortName">S_AXI_WDATA[127:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_WDATA[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/S_AXI_WLAST" type="logic">
+         <obj_property name="ElementShortName">S_AXI_WLAST</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_WLAST</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/S_AXI_WREADY" type="logic">
+         <obj_property name="ElementShortName">S_AXI_WREADY</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_WREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/S_AXI_WVALID" type="logic">
+         <obj_property name="ElementShortName">S_AXI_WVALID</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_WVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/M_AXI_WVALID" type="logic">
+         <obj_property name="ElementShortName">M_AXI_WVALID</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_WVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/M_AXI_WREADY" type="logic">
+         <obj_property name="ElementShortName">M_AXI_WREADY</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_WREADY</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/beat_counter" type="array">
+      <obj_property name="ElementShortName">beat_counter[3:0]</obj_property>
+      <obj_property name="ObjectShortName">beat_counter[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/mem_idx" type="array">
+      <obj_property name="ElementShortName">mem_idx[63:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_idx[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/wr_current_addr" type="array">
+      <obj_property name="ElementShortName">wr_current_addr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_current_addr[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/base_mem_idx" type="array">
+      <obj_property name="ElementShortName">base_mem_idx[63:0]</obj_property>
+      <obj_property name="ObjectShortName">base_mem_idx[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/wr_beat_count" type="array">
+      <obj_property name="ElementShortName">wr_beat_count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_beat_count[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/current_state" type="array">
+      <obj_property name="ElementShortName">current_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/spm_rdata" type="array">
+      <obj_property name="ElementShortName">spm_rdata[127:0]</obj_property>
+      <obj_property name="ObjectShortName">spm_rdata[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group773" type="group">
+      <obj_property name="label">DMA_REG</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/SRC" type="array">
+         <obj_property name="ElementShortName">SRC[63:0]</obj_property>
+         <obj_property name="ObjectShortName">SRC[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/DST" type="array">
+         <obj_property name="ElementShortName">DST[63:0]</obj_property>
+         <obj_property name="ObjectShortName">DST[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/SIZE" type="array">
+         <obj_property name="ElementShortName">SIZE[63:0]</obj_property>
+         <obj_property name="ObjectShortName">SIZE[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/CTRL" type="array">
+         <obj_property name="ElementShortName">CTRL[63:0]</obj_property>
+         <obj_property name="ObjectShortName">CTRL[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/STATUS" type="array">
+         <obj_property name="ElementShortName">STATUS[63:0]</obj_property>
+         <obj_property name="ObjectShortName">STATUS[63:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/state" type="array">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/current_state" type="array">
+      <obj_property name="ElementShortName">current_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/M_AXI_RLAST" type="logic">
+      <obj_property name="ElementShortName">M_AXI_RLAST</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_RLAST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/M_AXI_RREADY" type="logic">
+      <obj_property name="ElementShortName">M_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/M_AXI_RVALID" type="logic">
+      <obj_property name="ElementShortName">M_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/BEATS_PER_BURST" type="array">
+      <obj_property name="ElementShortName">BEATS_PER_BURST[3:0]</obj_property>
+      <obj_property name="ObjectShortName">BEATS_PER_BURST[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/bytes_left" type="array">
+      <obj_property name="ElementShortName">bytes_left[63:0]</obj_property>
+      <obj_property name="ObjectShortName">bytes_left[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/current_src" type="array">
+      <obj_property name="ElementShortName">current_src[63:0]</obj_property>
+      <obj_property name="ObjectShortName">current_src[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/current_dst" type="array">
+      <obj_property name="ElementShortName">current_dst[63:0]</obj_property>
+      <obj_property name="ObjectShortName">current_dst[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/dma_dir" type="logic">
+      <obj_property name="ElementShortName">dma_dir</obj_property>
+      <obj_property name="ObjectShortName">dma_dir</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/dma_start_ack" type="logic">
+      <obj_property name="ElementShortName">dma_start_ack</obj_property>
+      <obj_property name="ObjectShortName">dma_start_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/M_AXI_ARADDR" type="array">
+      <obj_property name="ElementShortName">M_AXI_ARADDR[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_ARADDR[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/M_AXI_ARLEN" type="array">
+      <obj_property name="ElementShortName">M_AXI_ARLEN[3:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_ARLEN[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/S_AXI_ARLEN" type="array">
+      <obj_property name="ElementShortName">S_AXI_ARLEN[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARLEN[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/M_AXI_ARSIZE" type="array">
+      <obj_property name="ElementShortName">M_AXI_ARSIZE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_ARSIZE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/M_AXI_ARBURST" type="array">
+      <obj_property name="ElementShortName">M_AXI_ARBURST[1:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_ARBURST[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/M_AXI_ARVALID" type="logic">
+      <obj_property name="ElementShortName">M_AXI_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_ARVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/M_AXI_ARREADY" type="logic">
+      <obj_property name="ElementShortName">M_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_ARREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/rd_addr" type="array">
+      <obj_property name="ElementShortName">rd_addr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_addr[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/rd_len" type="array">
+      <obj_property name="ElementShortName">rd_len[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_len[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/rd_size" type="array">
+      <obj_property name="ElementShortName">rd_size[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_size[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/rd_beat_count" type="array">
+      <obj_property name="ElementShortName">rd_beat_count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_beat_count[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/dma_addr" type="array">
+      <obj_property name="ElementShortName">dma_addr[12:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_addr[12:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/dma_wdata" type="array">
+      <obj_property name="ElementShortName">dma_wdata[127:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_wdata[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/dma_we" type="logic">
+      <obj_property name="ElementShortName">dma_we</obj_property>
+      <obj_property name="ObjectShortName">dma_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/addr" type="array">
+      <obj_property name="ElementShortName">addr[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[12:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/we" type="logic">
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/wdata" type="array">
+      <obj_property name="ElementShortName">wdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group12752" type="group">
+      <obj_property name="label">MAIN MEM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/memory[0]" type="array">
+         <obj_property name="ElementShortName">[0][63:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/memory[1]" type="array">
+         <obj_property name="ElementShortName">[1][63:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/memory[2]" type="array">
+         <obj_property name="ElementShortName">[2][63:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/Main_Memory/memory[3]" type="array">
+         <obj_property name="ElementShortName">[3][63:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][63:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/dma_busy" type="logic">
+      <obj_property name="ElementShortName">dma_busy</obj_property>
+      <obj_property name="ObjectShortName">dma_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_CTRL/M_AXI_RLAST" type="logic">
+      <obj_property name="ElementShortName">M_AXI_RLAST</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_RLAST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/DMA_REG/dma_done" type="logic">
+      <obj_property name="ElementShortName">dma_done</obj_property>
+      <obj_property name="ObjectShortName">dma_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="group12751" type="group">
+      <obj_property name="label">SPM MEM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[0]" type="array">
+         <obj_property name="ElementShortName">[0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[1]" type="array">
+         <obj_property name="ElementShortName">[1][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[2]" type="array">
+         <obj_property name="ElementShortName">[2][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[3]" type="array">
+         <obj_property name="ElementShortName">[3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[4]" type="array">
+         <obj_property name="ElementShortName">[4][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[5]" type="array">
+         <obj_property name="ElementShortName">[5][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[6]" type="array">
+         <obj_property name="ElementShortName">[6][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[7]" type="array">
+         <obj_property name="ElementShortName">[7][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[8]" type="array">
+         <obj_property name="ElementShortName">[8][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[8][7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[9]" type="array">
+         <obj_property name="ElementShortName">[9][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[9][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[10]" type="array">
+         <obj_property name="ElementShortName">[10][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[10][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[11]" type="array">
+         <obj_property name="ElementShortName">[11][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[11][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[12]" type="array">
+         <obj_property name="ElementShortName">[12][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[12][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[14]" type="array">
+         <obj_property name="ElementShortName">[14][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[14][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[13]" type="array">
+         <obj_property name="ElementShortName">[13][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[13][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[15]" type="array">
+         <obj_property name="ElementShortName">[15][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[15][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[16]" type="array">
+         <obj_property name="ElementShortName">[16][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[16][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[17]" type="array">
+         <obj_property name="ElementShortName">[17][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[17][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[18]" type="array">
+         <obj_property name="ElementShortName">[18][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[18][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[19]" type="array">
+         <obj_property name="ElementShortName">[19][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[19][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[20]" type="array">
+         <obj_property name="ElementShortName">[20][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[20][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[21]" type="array">
+         <obj_property name="ElementShortName">[21][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[21][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[22]" type="array">
+         <obj_property name="ElementShortName">[22][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[22][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[23]" type="array">
+         <obj_property name="ElementShortName">[23][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[23][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[24]" type="array">
+         <obj_property name="ElementShortName">[24][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[24][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[25]" type="array">
+         <obj_property name="ElementShortName">[25][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[25][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[26]" type="array">
+         <obj_property name="ElementShortName">[26][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[26][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[27]" type="array">
+         <obj_property name="ElementShortName">[27][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[27][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[28]" type="array">
+         <obj_property name="ElementShortName">[28][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[28][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[29]" type="array">
+         <obj_property name="ElementShortName">[29][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[29][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[30]" type="array">
+         <obj_property name="ElementShortName">[30][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[30][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/CPU_System_Top_tb/CPU_System_UUT/SPM_UNIT/SPM_unit/ScratchPadMem[31]" type="array">
+         <obj_property name="ElementShortName">[31][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[31][7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
