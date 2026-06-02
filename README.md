@@ -26,11 +26,11 @@ Three memory systems were implemented and compared:
 
 ### Compact Block Diagram
 
-![Compact Architecture](images/compact_block_diagram.png)
+![Compact Architecture](BD/Diagram.drawio.png)
 
 ### Detailed Block Diagram
 
-![Detailed Architecture](images/detailed_block_diagram.png)
+![Detailed Architecture](BD/RiscV64IM.drawio.png)
 
 ## Repository Structure
 
