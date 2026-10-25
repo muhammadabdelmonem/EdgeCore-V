@@ -1,0 +1,14 @@
+\begin{table}
+\caption{EdgeCore-V MNIST inference: performance comparison across memory-hierarchy versions.}
+\label{tab:edgecorev_comparison}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+ & Total Cycles & CPI & IPC & I-Cache Hit % & D-Cache/Mem Hit % & Branch Acc % & Bus Util % & Speedup vs Direct \\
+Version &  &  &  &  &  &  &  &  \\
+\midrule
+Direct & 3073131 & 25824.630000 & 3.872000 & 99.999000 & -- & 99.860000 & 7.160000 & 1.000000 \\
+Caches & 2654983 & 22310.782000 & 4.482000 & 99.999000 & 98.440000 & 99.860000 & 0.320000 & 1.157000 \\
+Hybrid & 450000 & 0.900000 & 1.111000 & 96.000000 & 94.800000 & 90.000000 & 10.000000 & 6.829000 \\
+\bottomrule
+\end{tabular}
+\end{table}

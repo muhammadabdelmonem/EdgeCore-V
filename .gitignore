@@ -93,3 +93,9 @@ Thumbs.db
 *.backup
 *.zip
 *.tar.gz
+
+mnist/**/*.csv
+mnist/**/test_data.h
+.venv/
+.idea/
+workfile
